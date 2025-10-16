@@ -81,12 +81,12 @@ a {
     box-shadow: 5px;
     transition: all 0.3s ease;
 }
-a:hover{
+a:hover {
     background-color: #e3a952;
     transform: scale(1.05);
     box-shadow: 0 0 20px black;
 }
-footer{
+footer {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
