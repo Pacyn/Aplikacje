@@ -2,6 +2,17 @@ div#geo{
     display: block;
 }
 #map{
-    height: 250px;
-    width: 550px;
+    height: 500px;
+    width: 500px;
+    float: left;
+    margin-right: 20px;
+}
+#rasterCanvas{
+    border-style: solid;
+    float: left;
+    height: 516px;
+    width: 516px;
+}
+.dropTarget{
+    border: 2px dashed #a48e47ff;
 }
