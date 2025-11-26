@@ -1,6 +1,7 @@
 var xhttp = new XMLHttpRequest();
 var response, city;
 const container = document.getElementById("weatherContainer");
+api = "";
 
 xhttp.onload = function(){    
     response = JSON.parse(xhttp.responseText);
@@ -11,14 +12,14 @@ xhttp.onload = function(){
         response.main.feels_like,
         response.weather[0].description);
     container.appendChild(p);
-    getApiForecast(`https://api.openweathermap.org/data/2.5/forecast?q=${response.name}&appid=2959962c41b9fdf356cef6fb37d0be1b&lang=pl&units=metric`);
+    getApiForecast(`https://api.openweathermap.org/data/2.5/forecast?q=${response.name}&appid=${api}&lang=pl&units=metric`);
 }
 
 function getApi(city){
     container.textContent = "";
     city = document.getElementById("textCity").value;
     if(city == "") return;
-    xhttp.open("GET",`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2959962c41b9fdf356cef6fb37d0be1b&lang=pl&units=metric`);
+    xhttp.open("GET",`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}&lang=pl&units=metric`);
     xhttp.send();
 }
 
